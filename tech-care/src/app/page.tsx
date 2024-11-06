@@ -44,7 +44,7 @@ export default function Home() {
     name: string;
     labResults: string[];
   }
-  const handlePatientClick = (each) => {
+  const handlePatientClick = (each: EachProps) => {
     setPatientVitals({
       respiratory_rate: each.diagnosis_history[0].respiratory_rate.value,
       temperature: each.diagnosis_history[0].temperature.value,

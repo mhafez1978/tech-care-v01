@@ -1,9 +1,7 @@
-import { NextResponse } from "next/server";
-
-export async function GET(req: Request) {
-  let username = "coalition";
-  let password = "skills-test";
-  let auth = btoa(`${username}:${password}`);
+export async function GET() {
+  const username = process.env.USERNAME;
+  const password = process.env.PASSWORD;
+  const auth = btoa(`${username}:${password}`);
 
   const myHeaders = { Authorization: `Basic ${auth}` };
   const url = "https://fedskillstest.coalitiontechnologies.workers.dev";
